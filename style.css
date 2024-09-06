@@ -1,0 +1,9 @@
+/* this import rests the default browser stylesheet */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+* {
+  background-color: azure;
+}
+
+/* 
+make sure you have media queries  */
