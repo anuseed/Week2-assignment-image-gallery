@@ -32,10 +32,7 @@ function createMainImage(mainImageContainer) {
   const img = document.createElement("img");
   img.src = "Images/europeana-88w2yI5A78Y-unsplash.jpg";
   img.alt =
-    "Impressionist stley portrait of a young man wearing a yellow and blue shirt";
-  img.className = "image1";
-  img.style.width = "100%";
-  img.style.height = "100%";
+    "Impressionist style portrait of a young man wearing a yellow and blue shirt";
   console.log(img);
   mainImageContainer.appendChild(img);
   return img;
