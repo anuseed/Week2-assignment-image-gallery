@@ -1,15 +1,17 @@
 console.log("Hello");
+console.log(document);
 
 //store images and manipulate in js
 //we are going to create a place to store our images
 //each image will be an individual object
 
+//IMAGE WONT ADD - WHY - RELATIVE PATH
 let images = [
   {
-    src: "https://images.unsplash.com/photo-1530209925954-8aecf4eb1e43?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "daisies in a meadow blurry with light refracting over image",
-    width: 300,
-    height: 200,
+    src: "Images/europeana-88w2yI5A78Y-unsplash.jpg",
+    alt: "Impressionist stlye portrait of a young man wearing a yellow and blue shirt",
+    width: 200,
+    height: 300,
   },
 ];
 
@@ -22,6 +24,22 @@ let images = [
 //select the main image container
 
 //step 2: we are going to write a function to create images in our thumbnail
+const mainImageContainer = document.getElementById("main-image-container");
+console.log(mainImageContainer);
+
+function createMainImage(mainImageContainer) {
+  const img = document.createElement("img");
+  img.src = "Images/europeana-88w2yI5A78Y-unsplash.jpg";
+  img.alt =
+    "Impressionist stley portrait of a young man wearing a yellow and blue shirt";
+  img.className = "image1";
+  img.style.width = "100%";
+  img.style.height = "100%";
+  console.log(img);
+  mainImageContainer.appendChild(img);
+}
+
+createMainImage(mainImageContainer);
 
 function createThumbnails(thumbnailContainer) {
   //we need a loop to run through the array of images and create an instance of each of them - forEach

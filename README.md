@@ -17,3 +17,6 @@ Requesting feedback about a specific part of your submission.
 What useful external sources helped you complete the assignment (e.g YouTube tutorials)?
 What errors or bugs did you encounter while completing your assignment? How did you solve them?
 What went really well and what could have gone better?
+
+REALLY STRUGGLED ADDING THE IMAGE FILES TO SRC FOR SOME REASON IT JUST WONT SELECT IT FROM MY IMAGE FILE?
+Only seems to work in HTML so JS doesn't complete or know to find imgages - needed to copy relative path
