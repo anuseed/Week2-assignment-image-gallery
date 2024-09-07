@@ -20,3 +20,7 @@ What went really well and what could have gone better?
 
 REALLY STRUGGLED ADDING THE IMAGE FILES TO SRC FOR SOME REASON IT JUST WONT SELECT IT FROM MY IMAGE FILE?
 Only seems to work in HTML so JS doesn't complete or know to find imgages - needed to copy relative path
+
+This is hard, even adding a basic image in js was very difficult. Don't feel I understand JS at all.
+
+how can i use flexbox on the thumbnail in media queries to make it appear on the left as a row - if I need it to be postion absolute to use the z index?

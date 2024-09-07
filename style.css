@@ -4,6 +4,36 @@
 * {
   background-color: azure;
 }
+#thumbnail-container {
+  display: flex;
+  justify-content: center;
+  /* position: fixed;
+  z-index: 1; */
+}
+#thumbnail-container img {
+  height: 200px;
+  align-content: center;
+}
+
+@media (min-width: 600px) {
+  .entire-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    flex-flow: wrap;
+  }
+  /* .thumbnails {
+    
+  } */
+}
+
+@media (min-width: 800px) {
+  .entire-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 
 /* 
 make sure you have media queries  */

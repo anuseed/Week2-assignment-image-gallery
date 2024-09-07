@@ -1,29 +1,30 @@
-console.log("Hello");
-console.log(document);
-
-//store images and manipulate in js
-//we are going to create a place to store our images
-//each image will be an individual object
-
-//IMAGE WONT ADD - WHY - RELATIVE PATH
-let images = [
+let imageList = [
   {
     src: "Images/europeana-88w2yI5A78Y-unsplash.jpg",
     alt: "Impressionist stlye portrait of a young man wearing a yellow and blue shirt",
-    width: 200,
-    height: 300,
+  },
+  {
+    src: "Images/europeana-uS5LXujNOq4-unsplash.jpg",
+    alt: "Painting of man made with fruit and vegetables",
+  },
+  {
+    src: "Images/nicola-powys-6DmxrSMtUpM-unsplash.jpg",
+    alt: "Photograph painted over with thick brushstrokes to create abstract face",
+  },
+  {
+    src: "Images/vadim-bogulov-Of1VFDCVlTc-unsplash.jpg",
+    alt: "Pixelated portrait of a woman with blue hair",
+  },
+  {
+    src: "Images/the-cleveland-museum-of-art-RbeVy3X5xRM-unsplash.jpg",
+    alt: "Portriat painting of a woman with plaited hair and wreath on a blue background",
+  },
+  {
+    src: "Images/swapnil-dwivedi-N2IJ31xZ_ks-unsplash.jpg",
+    alt: "High contrast photograph of a man smoking a ciggarete with a white turban on his head.",
   },
 ];
 
-//!help for arrow keys stretch goal
-//you need a global variable to keep track of the index value
-//let currentIndex = 0
-
-//step 1: select the DOM element that will contain my images
-//select the thumbnail container
-//select the main image container
-
-//step 2: we are going to write a function to create images in our thumbnail
 const mainImageContainer = document.getElementById("main-image-container");
 console.log(mainImageContainer);
 
@@ -37,36 +38,29 @@ function createMainImage(mainImageContainer) {
   img.style.height = "100%";
   console.log(img);
   mainImageContainer.appendChild(img);
+  return img;
 }
 
-createMainImage(mainImageContainer);
+const mainImage = createMainImage(mainImageContainer);
+
+const thumbnailContainer = document.getElementById("thumbnail-container");
+console.log(thumbnailContainer);
+
+function changeImage(event) {
+  console.log(event);
+  mainImage.src = event.target.src;
+  event.target;
+}
 
 function createThumbnails(thumbnailContainer) {
-  //we need a loop to run through the array of images and create an instance of each of them - forEach
-  thumbnailContainer.forEach(function (thumbnail, index) {
-    //create a document method to contain my image information (<img>)
-    //assign a value to the img attirbutes (src, alt, width, height) --> img.src ="value"
-    //optional: you can also give each image a classname
-    //append the new images to the DOM container
-    //add an evnet listener to each image so when the user clicks, the big image shows on the screen
-    //images will need to be styled to small and big
-    //function eventHandler () {}
-    createLargeImage(thumbnail[index]);
-    //when the user clicks the image we are going to call the fucntion that calls the big image
-    //thumbnail.addEventListener("click", eventHandler )
-  });
+  for (let i = 0; i < 6; i++) {
+    console.log(imageList[i]);
+
+    const thumbnailImage = document.createElement("img");
+    thumbnailImage.src = imageList[i].src;
+    thumbnailImage.addEventListener("click", changeImage);
+    thumbnailContainer.appendChild(thumbnailImage);
+  }
 }
 
-//step 3: we need to write a function to create the big image
-function createLargeImage(largeImage) {
-  //!you will find a problem here: it will keep adding one after the other
-  //innerHTML = "" (set to be empty)
-  //create img element
-  //(optional) you could give ths image a classname
-  //set the src value
-  //set the alt value
-  //append large image to DOM
-  //no loop as we only want the large image to show when clicked on
-}
-
-//
+createThumbnails(thumbnailContainer);
