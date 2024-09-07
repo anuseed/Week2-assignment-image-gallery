@@ -25,9 +25,13 @@ let imageList = [
   },
 ];
 
+//step 1 declare mainImageContainer by getting it from the document with getElementById
 const mainImageContainer = document.getElementById("main-image-container");
 console.log(mainImageContainer);
 
+//step 2 createMainImage in container with values to put it in the HTML from JS
+//append image to the container
+//make the img available by using "return"
 function createMainImage(mainImageContainer) {
   const img = document.createElement("img");
   img.src = "Images/europeana-88w2yI5A78Y-unsplash.jpg";
@@ -38,16 +42,23 @@ function createMainImage(mainImageContainer) {
   return img;
 }
 
+//step 3 call mainImage that was created with function createMainImage
 const mainImage = createMainImage(mainImageContainer);
 
+//step 1 declare thumbnailContaner by getting it from the document using getElementByID
 const thumbnailContainer = document.getElementById("thumbnail-container");
 console.log(thumbnailContainer);
 
+//Step 2 create an event handler for the thumbnail - I need more help to understand how this works. Not entirely sure what the event.target is
 function changeImage(event) {
   console.log(event);
   mainImage.src = event.target.src;
   event.target;
 }
+
+//step 3 create a for loop to choose a single image from the thumnail images to show when a user clicks on the image in the thumbnail
+//create an event listener to the function
+//NB! APPEND APPEND
 
 function createThumbnails(thumbnailContainer) {
   for (let i = 0; i < 6; i++) {
@@ -60,4 +71,5 @@ function createThumbnails(thumbnailContainer) {
   }
 }
 
+//call the function
 createThumbnails(thumbnailContainer);
